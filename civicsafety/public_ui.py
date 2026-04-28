@@ -7,7 +7,8 @@ def render_public_lookup_page() -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CivicSafety v0.1.0</title>
+<link rel="icon" href="data:,">
+  <title>CivicSafety v0.1.1</title>
   <style>
     :root{--ink:#13211d;--muted:#52625d;--line:#cfe1d8;--paper:#f7fbf8;--card:#ffffff;--accent:#0b6b4f;--gold:#c78618}
     *{box-sizing:border-box}body{margin:0;font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at top left,#dff2e8,transparent 32rem),linear-gradient(135deg,#fbfff9,#eef7f1);color:var(--ink)}
@@ -25,10 +26,10 @@ def render_public_lookup_page() -> str:
     <div>
       <p class="eyebrow">CivicSuite / CivicSafety</p>
       <h1>Non-CJIS public-safety admin support.</h1>
-      <p>CivicSafety v0.1.0 helps public-safety administrative staff answer SOP questions with citations, prepare non-CJI training checklists, draft PIO updates, and summarize aggregate public statistics.</p>
+      <p>CivicSafety v0.1.1 helps public-safety administrative staff answer SOP questions with citations, prepare non-CJI training checklists, draft PIO updates, and summarize aggregate public statistics.</p>
     </div>
     <div class="panel">
-      <h2>v0.1.0 boundary</h2>
+      <h2>v0.1.1 boundary</h2>
       <p class="boundary">No CJI ingestion, no CAD/RMS integration, no dispatch, no enforcement, no investigations, no evidence workflows, no legal advice, no live LLM calls, and no connector runtime ship in this release.</p>
     </div>
   </section>
@@ -39,8 +40,8 @@ def render_public_lookup_page() -> str:
   </section>
   <section class="panel">
     <h2>Architecture</h2>
-    <p><strong>Staff request</strong> -> CivicSafety deterministic API -> CivicCore foundation. Sensitive public-safety connectors are future isolated adapters, not v0.1.0 paths.</p>
-    <p>Dependency: <code>civiccore==0.2.0</code>. Repo: <a href="https://github.com/CivicSuite/civicsafety">CivicSuite/civicsafety</a>.</p>
+    <p><strong>Staff request</strong> -> CivicSafety deterministic API -> CivicCore foundation. Sensitive public-safety connectors are future isolated adapters, not v0.1.1 paths.</p>
+    <p>Dependency: <code>civiccore==0.3.0</code>. Repo: <a href="https://github.com/CivicSuite/civicsafety">CivicSuite/civicsafety</a>.</p>
   </section>
 </main>
 </body>

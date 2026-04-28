@@ -15,7 +15,7 @@ python -m pip install -e ".[dev]"
 python -m uvicorn civicsafety.main:app --host 127.0.0.1 --port 8143
 ```
 
-Runtime dependency: `civiccore==0.2.0`.
+Runtime dependency: `civiccore==0.3.0`.
 
 Primary endpoints:
 
@@ -30,4 +30,4 @@ Primary endpoints:
 
 ![CivicSafety architecture](docs/architecture-civicsafety.svg)
 
-CivicSafety is a module on top of CivicCore. v0.1.0 is deterministic and local: no CJI ingestion, CAD/RMS integration, dispatch, enforcement, investigations, evidence workflows, legal advice, live LLM calls, or connector runtime is shipped.
+CivicSafety is a module on top of CivicCore. v0.1.1 is deterministic and local: no CJI ingestion, CAD/RMS integration, dispatch, enforcement, investigations, evidence workflows, legal advice, live LLM calls, or connector runtime is shipped.

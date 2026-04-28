@@ -6,7 +6,7 @@ from civicsafety.training import build_training_checklist
 
 
 def test_version_is_release_version():
-    assert __version__ == "0.1.0"
+    assert __version__ == "0.1.1"
 
 
 def test_policy_answer_blocks_cji_and_requires_review():

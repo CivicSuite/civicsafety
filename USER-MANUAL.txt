@@ -1,0 +1,7 @@
+CivicSafety User Manual
+
+For staff: use CivicSafety to draft cited non-CJIS policy/SOP answers, prepare training checklists, draft PIO updates, and summarize aggregate public statistics. Supervisors and PIO staff approve every output before use.
+
+Boundaries: CivicSafety does not ingest CJI, connect to CAD/RMS, support dispatch, investigate cases, drive enforcement, manage evidence, provide legal advice, or replace public-safety systems of record.
+
+For IT: install with python -m pip install -e ".[dev]" and run with python -m uvicorn civicsafety.main:app --host 127.0.0.1 --port 8143. Depends on civiccore==0.2.0.

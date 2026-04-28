@@ -24,7 +24,7 @@ def summarize_public_statistics(statistics: list[PublicSafetyStatistic]) -> Publ
         aggregate_only=True,
         cji_excluded=True,
         boundary=(
-            "CivicSafety v0.1.0 handles aggregate, public-facing statistics only. It does not "
+            "CivicSafety v0.1.1 handles aggregate, public-facing statistics only. It does not "
             "expose incident narratives, evidence, CAD/RMS records, or personally identifying CJI."
         ),
     )

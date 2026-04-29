@@ -2,7 +2,7 @@
 
 ## Non-Technical Staff
 
-CivicSafety helps public-safety administrative staff prepare cited non-CJIS policy/SOP answers, build training checklists, draft PIO updates, and summarize aggregate public statistics.
+CivicSafety helps public-safety administrative staff prepare cited non-CJIS policy/SOP answers, build training checklists, draft PIO updates, summarize aggregate public statistics, and optionally save training/PIO workpapers for later supervisor review.
 
 Supervisors and PIO staff remain responsible for every answer, checklist, statistic, and public draft. CivicSafety does not ingest CJI, connect to CAD/RMS, support dispatch, investigate cases, drive enforcement, manage evidence, provide legal advice, or replace public-safety systems of record.
 
@@ -23,11 +23,15 @@ Primary endpoints:
 - `GET /civicsafety` - public sample UI.
 - `POST /api/v1/civicsafety/policy-answer` - cited non-CJIS policy/SOP answer draft.
 - `POST /api/v1/civicsafety/training-checklist` - supervisor-reviewed training checklist.
+- `GET /api/v1/civicsafety/training-checklist/{checklist_id}` - persisted training checklist retrieval when configured.
 - `POST /api/v1/civicsafety/pio-draft` - PIO-reviewed public update draft.
+- `GET /api/v1/civicsafety/pio-draft/{draft_id}` - persisted PIO draft retrieval when configured.
 - `POST /api/v1/civicsafety/public-stats` - aggregate public-statistics summary.
+
+Optional persistence is controlled by `CIVICSAFETY_WORKPAPER_DB_URL`. Store only non-CJI administrative training/PIO workpapers. Do not point this module at CAD/RMS, dispatch, evidence, or investigative data stores.
 
 ## Architecture
 
 ![CivicSafety architecture](docs/architecture-civicsafety.svg)
 
-CivicSafety is a module on top of CivicCore. v0.1.1 is deterministic and local: no CJI ingestion, CAD/RMS integration, dispatch, enforcement, investigations, evidence workflows, legal advice, live LLM calls, or connector runtime is shipped.
+CivicSafety is a module on top of CivicCore. v0.1.1 is deterministic and local with optional workpaper persistence: no CJI ingestion, CAD/RMS integration, dispatch, enforcement, investigations, evidence workflows, legal advice, live LLM calls, or connector runtime is shipped.

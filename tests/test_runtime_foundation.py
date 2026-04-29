@@ -10,6 +10,7 @@ def test_root_reports_honest_current_state():
     payload = client.get("/").json()
     assert payload["name"] == "CivicSafety"
     assert payload["version"] == __version__
+    assert "database-backed training/PIO workpapers" in payload["message"]
     assert "CJI ingestion" in payload["message"]
     assert "not implemented yet" in payload["message"]
 
